@@ -254,6 +254,7 @@ WildDataPointers:
 	dw CelesteHillCaveWildMons
 	dw CelesteHillWildMons ; using Celeste Hill's summit for Celeste Hill Outside
 	dw BrunswickGrottoWildMons ; the glade will use the grotto's wildmons
+	dw NothingWildMons ; Mt Silver
 	assert_table_length NUM_MAPS
 	dw -1 ; end
 

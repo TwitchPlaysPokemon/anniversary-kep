@@ -581,6 +581,16 @@ _RedBedroomSNESText::
 	cont "It's time to go!"
 	done
 
+_ItWasJustADreamText::
+	text "Was it just"
+	line "a dream…?"
+	prompt
+
+_MtSilverIntroText::
+	text "Later that"
+	line "night…"
+	prompt
+
 _Route15UpstairsBinocularsText::
 	text "Looked into the"
 	line "binoculars..."

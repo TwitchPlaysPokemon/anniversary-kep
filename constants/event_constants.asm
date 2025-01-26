@@ -16,7 +16,9 @@
 	const EVENT_GOT_MANSION_GIFT
 	const EVENT_USED_MASTER_BALL ; Used to determine Chief's dialogue in the end-game.
 	const EVENT_MYSTERY_BOX_ACTIVATED
-	const_skip 9
+	const_skip 3
+	const EVENT_BEAT_DREAM_RED
+	const_skip 6
 	const EVENT_GOT_TOWN_MAP
 	const EVENT_ENTERED_BLUES_HOUSE
 	const EVENT_DAISY_WALKING

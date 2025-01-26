@@ -56,7 +56,8 @@ ColosseumSpec1:
 	special_warp_spec COLOSSEUM,     3, 4, CLUB
 ColosseumSpec2:
 	special_warp_spec COLOSSEUM,     6, 4, CLUB
-
+MtSilverSpec:
+	special_warp_spec MT_SILVER,     9,32, CAVERN
 
 MACRO fly_warp_spec
 	db \1, 0

@@ -1397,3 +1397,8 @@ INCLUDE "data/maps/headers/CeladonMansionRoofHouse.asm"
 INCLUDE "scripts/CeladonMansionRoofHouse.asm"
 INCLUDE "data/maps/objects/CeladonMansionRoofHouse.asm"
 CeladonMansionRoofHouse_Blocks: INCBIN "maps/CeladonMansionRoofHouse.blk"
+
+INCLUDE "data/maps/headers/MtSilver.asm"
+INCLUDE "scripts/MtSilver.asm"
+INCLUDE "data/maps/objects/MtSilver.asm"
+MtSilver_Blocks: INCBIN "maps/MtSilver.blk"

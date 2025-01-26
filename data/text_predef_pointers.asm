@@ -31,9 +31,9 @@ TextPredefs::
 	add_tx_pre MtMoonPokecenterBenchGuyText         ; 19
 	add_tx_pre RockTunnelPokecenterBenchGuyText     ; 1A
 	add_tx_pre CeladonUniversityPokecenterBenchGuyText              ; 1B
-	add_tx_pre CitrinePokecenterGuyText        ; 1C was unused bench guy text 2
-	add_tx_pre UnusedBenchGuyText3                  ; 1D XXX unused
-	add_tx_pre UnusedPredefText                     ; 1E XXX unused
+	add_tx_pre CitrinePokecenterGuyText             ; 1C was unused bench guy text 2
+	add_tx_pre RedsBedDreamText                     ; 1D
+	add_tx_pre RedsBedMtSilverText                  ; 1E
 	add_tx_pre PokemonCenterPCText                  ; 1F
 	add_tx_pre ViridianSchoolNotebook               ; 20
 	add_tx_pre ViridianSchoolBlackboard             ; 21

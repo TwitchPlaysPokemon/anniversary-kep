@@ -257,6 +257,7 @@ MapHSPointers:
 	dw NoHS 
 	dw NoHS
 	dw BrunswickGladeHS
+	dw NoHS
 	assert_table_length NUM_MAPS
 	dw -1 ; end
 
@@ -593,4 +594,6 @@ BrunswickGladeHS:
 	db BRUNSWICK_GLADE, $0B, SHOW            ; HS_GLADE_ITEM4
 CinnabarVolcanoFloorsHS:
 	db CINNABAR_VOLCANO_FLOORS, $05, SHOW
+MtSilverHS:
+	db MT_SILVER, $01, SHOW					 ; HS_TPP_RED
 	assert_table_length NUM_HS_OBJECTS

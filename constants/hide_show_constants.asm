@@ -253,4 +253,5 @@ DEF SHOW EQU $15
 	const HS_GLADE_ITEM3                   ; EE
 	const HS_GLADE_ITEM4                   ; EF
 	const HS_CINNABAR_VOLCANO_FLOORS_ITEM  ; F0
+	const HS_TPP_RED
 DEF NUM_HS_OBJECTS EQU const_value         ; F2 - FE all go unused.

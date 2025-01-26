@@ -2034,7 +2034,7 @@ wCelesteHillOutsideCurScript:: db
 wCelesteHillCaveCurScript:: db
 wBrunswickGladeCurScript:: db
 wMtMoonB1FCurScript:: db
-	ds 1
+wMtSilverCurScript:: db
 wSSAnneBowCurScript:: db
 wViridianForestCurScript:: db
 wMuseum1FCurScript:: db

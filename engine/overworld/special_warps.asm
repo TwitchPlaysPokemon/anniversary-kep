@@ -49,6 +49,11 @@ LoadSpecialWarpData:
 	ld hl, ColosseumSpec2
 	jr .copyWarpData
 .notColosseum
+	cp MT_SILVER
+	jr nz, .notMtSilver
+	ld hl, MtSilverSpec
+	jr .copyWarpData
+.notMtSilver
 	ld a, [wd732]
 	bit 1, a
 	jr nz, .notFirstMap
