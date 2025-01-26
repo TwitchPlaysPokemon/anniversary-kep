@@ -5,8 +5,9 @@
 ;	DEF \1 EQUS "((\2 - SFX_Headers_1) / 3)"
 ;ENDM
 
-	const_def 1
+	const_def 0
 
+	const MUSIC_NOTHING
 	const MUSIC_PALLET_TOWN
 	const MUSIC_POKECENTER
 	const MUSIC_GYM
@@ -70,6 +71,7 @@
 	const MUSIC_ELITE_FOUR_BATTLE
 	; const MUSIC_CHAMP_RIVAL
 	const MUSIC_GALAR_BIRDS
+	const MUSIC_JOHTOCHAMP
 
 	const NUM_SONGS
 

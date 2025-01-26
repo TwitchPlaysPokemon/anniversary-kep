@@ -64,3 +64,4 @@ Music:
 	dba Music_EliteFourBattle
 	; dba Music_ChampRival
 	dba Music_GalarBirds
+	dba Music_ChampionBattle

@@ -85,7 +85,7 @@ PlayBattleMusic::
 	cp OPP_RIVAL3
 	jr z, .finalBattle 
 	cp OPP_KRIS
-	jr z, .finalBattle 
+	jr z, .johtoChamp 
 	jr nz, .normalTrainerBattle
 .GymBattle
 	ld a, MUSIC_GYM_LEADER_BATTLE
@@ -104,6 +104,9 @@ PlayBattleMusic::
 	jr .playSong
 .finalBattle
 	ld a, MUSIC_FINAL_BATTLE
+	jr .playSong
+.johtoChamp
+	ld a, MUSIC_JOHTOCHAMP
 	jr .playSong
 .mewtwoBattle
 	ld a, MUSIC_MEWTWO01
