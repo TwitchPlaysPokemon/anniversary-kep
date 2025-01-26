@@ -73,26 +73,26 @@
 	const SPRITE_CHANSEY                 ; $44
 	const SPRITE_JESSIE                  ; $45
 	const SPRITE_JAMES                   ; $46
-	const SPRITE_SMALL_BIRD
-	const SPRITE_CAT
-	const SPRITE_ARBOK
-	const SPRITE_KOFFING
-	const SPRITE_DIGLETT
-	const SPRITE_VOLTORB
-	const SPRITE_GENGAR
-	const SPRITE_MAGIKARP
+	const SPRITE_SMALL_BIRD				 ; $47
+	const SPRITE_CAT					 ; $48
+	const SPRITE_ARBOK					 ; $49
+	const SPRITE_KOFFING				 ; $4a
+	const SPRITE_DIGLETT                 ; $4b
+	const SPRITE_VOLTORB				 ; $4c
+	const SPRITE_GENGAR					 ; $4d
+	const SPRITE_MAGIKARP				 ; $4e
 DEF FIRST_STILL_SPRITE EQU const_value
-	const SPRITE_POKE_BALL               ; $47
-	const SPRITE_FOSSIL                  ; $48
-	const SPRITE_BOULDER                 ; $49
-	const SPRITE_PAPER                   ; $4a
-	const SPRITE_POKEDEX                 ; $4b
-	const SPRITE_CLIPBOARD               ; $4c
-	const SPRITE_SNORLAX                 ; $4d
-	const SPRITE_FAKE_TREE        ; $4e was SPRITE_UNUSED_OLD_AMBER
-	const SPRITE_OLD_AMBER               ; $4f
-	const SPRITE_UNUSED_GAMBLER_ASLEEP_1 ; $50
-	const SPRITE_POLIWAG 				 ; $51 UNUSED_GAMBLER_ASLEEP_2
-	const SPRITE_GAMBLER_ASLEEP          ; $52
+	const SPRITE_POKE_BALL               ; $4f
+	const SPRITE_FOSSIL                  ; $50
+	const SPRITE_BOULDER                 ; $51
+	const SPRITE_PAPER                   ; $52
+	const SPRITE_POKEDEX                 ; $53
+	const SPRITE_CLIPBOARD               ; $54
+	const SPRITE_SNORLAX                 ; $55
+	const SPRITE_FAKE_TREE        		 ; $56 was SPRITE_UNUSED_OLD_AMBER
+	const SPRITE_OLD_AMBER               ; $57
+	const SPRITE_UNUSED_GAMBLER_ASLEEP_1 ; $58
+	const SPRITE_POLIWAG 				 ; $59 UNUSED_GAMBLER_ASLEEP_2
+	const SPRITE_GAMBLER_ASLEEP          ; $5a
 DEF NUM_SPRITES EQU const_value - 1
 ;there are pidgey, and rattata sprites that I can't find discernible use for yet.
