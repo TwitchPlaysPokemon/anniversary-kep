@@ -60,4 +60,5 @@ TrainerPicAndMoneyPointers::
 	pic_money JackPic,         5000
 	pic_money JessieJamesPic,  5000
 	pic_money GiovanniPic2,    9900
+	pic_money KrisPic,         9900
 	assert_table_length NUM_TRAINERS

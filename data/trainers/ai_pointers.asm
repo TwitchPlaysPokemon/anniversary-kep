@@ -57,4 +57,5 @@ TrainerAIPointers:
 	dbw 2, BlackbeltAI ; Jack
 	dbw 2, GenericAI ; Jessie & James
 	dbw 3, SabrinaAI
+	dbw 3, SabrinaAI ; Kris
 	assert_table_length NUM_TRAINERS

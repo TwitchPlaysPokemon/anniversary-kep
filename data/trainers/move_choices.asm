@@ -62,4 +62,5 @@ TrainerClassMoveChoiceModifications:
 	move_choices 1, 2, 3, 4 ; JACK
 	move_choices 1, 3,   ; JESSIE_JAMES
 	move_choices 1, 2, 3, 4 ; LEADER_GIOVANNI
+	move_choices 1, 2, 3, 4 ; KRIS
 	assert_list_length NUM_TRAINERS

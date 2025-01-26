@@ -83,7 +83,9 @@ PlayBattleMusic::
 	cp OPP_PROF_OAK ; could also use the final battle theme, but I think the elite 4 theme fits better instead. I'm happy to change this if it isn't well-liked.
 	jr z, .Elite4Battle 
 	cp OPP_RIVAL3
-	jr z, .finalBattle  
+	jr z, .finalBattle 
+	cp OPP_KRIS
+	jr z, .finalBattle 
 	jr nz, .normalTrainerBattle
 .GymBattle
 	ld a, MUSIC_GYM_LEADER_BATTLE

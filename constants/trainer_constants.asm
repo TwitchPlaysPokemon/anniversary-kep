@@ -61,11 +61,12 @@ ENDM
 	trainer_const CHANNELER      ; $2D
 	trainer_const AGATHA         ; $2E
 	trainer_const LANCE          ; $2F
-	trainer_const YUJIROU 		 ; $0D, was unused juggler, also not 0D but I can't be bothered to change everything
-	trainer_const STUDENT
-	trainer_const FIREFIGHTER
-	trainer_const KOICHI
-	trainer_const JACK
-	trainer_const JESSIE_JAMES
-	trainer_const LEADER_GIOVANNI
+	trainer_const YUJIROU 		 ; $30
+	trainer_const STUDENT        ; $31
+	trainer_const FIREFIGHTER    ; $32
+	trainer_const KOICHI         ; $33
+	trainer_const JACK           ; $34
+	trainer_const JESSIE_JAMES   ; $35
+	trainer_const LEADER_GIOVANNI; $36
+	trainer_const KRIS           ; $37
 DEF NUM_TRAINERS EQU const_value - 1

@@ -6,6 +6,7 @@ FemaleTrainerList::
 	db OPP_MISTY
 	db OPP_ERIKA
 	db OPP_STUDENT
+	db OPP_KRIS
 	db -1 ; end
 
 EvilTrainerList::
