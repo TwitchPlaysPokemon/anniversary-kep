@@ -1588,5 +1588,32 @@ SpecialTrainerMoves:
 	db 6, 3, THUNDER_WAVE
 	db 6, 4, SURF
 	db 0
+
+	db KRIS, 1	; Amanda
+	db 1, 1, THUNDERBOLT
+	db 1, 2, FIRE_PUNCH
+	db 1, 3, ICE_PUNCH
+	db 1, 4, LIGHT_SCREEN
+	db 2, 1, DIZZY_PUNCH
+	db 2, 2, FIRE_PUNCH
+	db 2, 3, THUNDERPUNCH
+	db 2, 4, ICE_PUNCH
+	db 3, 1, HI_JUMP_KICK
+	db 3, 2, WATERFALL
+	db 3, 3, ICE_PUNCH
+	db 3, 4, HYPNOSIS
+	db 4, 1, SMART_STRIKE
+	db 4, 2, TWINEEDLE
+	db 4, 3, SLASH
+	db 4, 4, SWORDS_DANCE
+	db 5, 1, PSYCHIC_M
+	db 5, 2, FIRE_PUNCH
+	db 5, 3, THUNDERPUNCH
+	db 5, 4, ICE_PUNCH
+	db 6, 1, HEADBUTT
+	db 6, 2, EARTHQUAKE
+	db 6, 3, SURF
+	db 6, 4, NIGHT_SHADE
+	db 0
 	
 	db -1 ; end

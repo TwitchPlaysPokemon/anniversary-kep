@@ -53,5 +53,5 @@ TrainerNames::
 	li "JACKY" ; Often called Jack, but the only source for that is the file names themselves, which are oft shortened or literal japanese translations; all other context is "Shinjuku Jacky".
 	li "JESSIE&JAMES"
 	li "GIOVANNI"
-	li "KRIS"
+	li "AMANDA"
 	assert_list_length NUM_TRAINERS
