@@ -1,4 +1,4 @@
-DEF OPP_ID_OFFSET EQU 200
+DEF OPP_ID_OFFSET EQU 195
 
 MACRO trainer_const
 	const \1
@@ -69,4 +69,8 @@ ENDM
 	trainer_const JESSIE_JAMES   ; $35
 	trainer_const LEADER_GIOVANNI; $36
 	trainer_const KRIS           ; $37
+	trainer_const CCC            ; $38
+	trainer_const KAY            ; $39
+	trainer_const BBBBBa         ; $3A
+	trainer_const ROCKETA        ; $3B
 DEF NUM_TRAINERS EQU const_value - 1

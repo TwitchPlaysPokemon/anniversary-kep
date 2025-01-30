@@ -23,4 +23,5 @@ EvilTrainerList::
 	db OPP_AGATHA
 	db OPP_JESSIE_JAMES
 	db OPP_LEADER_GIOVANNI
+	db OPP_ROCKETA
 	db -1 ; end

@@ -63,4 +63,8 @@ TrainerClassMoveChoiceModifications:
 	move_choices 1, 3,   ; JESSIE_JAMES
 	move_choices 1, 2, 3, 4 ; LEADER_GIOVANNI
 	move_choices 1, 2, 3, 4 ; KRIS
+	move_choices 1, 2, 3, 4 ; CCC
+	move_choices 1, 2, 3, 4 ; KAY
+	move_choices 1, 2, 3, 4 ; BBBBBa
+	move_choices 1, 2, 3, 4 ; ROCKETA
 	assert_list_length NUM_TRAINERS

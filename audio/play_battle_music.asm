@@ -84,6 +84,14 @@ PlayBattleMusic::
 	jr z, .Elite4Battle 
 	cp OPP_RIVAL3
 	jr z, .finalBattle 
+	cp OPP_CCC
+	jr z, .finalBattle 
+	cp OPP_KAY
+	jr z, .finalBattle 
+	cp OPP_BBBBBa
+	jr z, .finalBattle 
+	cp OPP_ROCKETA
+	jr z, .Giovanni 
 	cp OPP_KRIS
 	jr z, .johtoChamp 
 	jr nz, .normalTrainerBattle

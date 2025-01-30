@@ -54,4 +54,8 @@ TrainerNames::
 	li "JESSIE&JAMES"
 	li "GIOVANNI"
 	li "AMANDA"
+	li ")))"
+	li "KAY"
+	li "BBBBBa"
+	li "ROCKET A"
 	assert_list_length NUM_TRAINERS

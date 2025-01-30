@@ -58,4 +58,8 @@ TrainerAIPointers:
 	dbw 2, GenericAI ; Jessie & James
 	dbw 3, SabrinaAI
 	dbw 3, SabrinaAI ; Kris
+	dbw 3, LanceAI ; CCC
+	dbw 3, Rival3AI ; KAY
+	dbw 3, LanceAI ; BBBBBa
+	dbw 3, SabrinaAI ; ROCKETA
 	assert_table_length NUM_TRAINERS

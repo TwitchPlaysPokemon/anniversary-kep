@@ -1615,5 +1615,113 @@ SpecialTrainerMoves:
 	db 6, 3, SURF
 	db 6, 4, NIGHT_SHADE
 	db 0
+
+	db CCC, 1
+	db 1, 1, THUNDER
+	db 1, 2, MEGA_KICK
+	db 1, 3, THUNDER_WAVE
+	db 1, 4, SWIFT
+	db 2, 1, EARTHQUAKE
+	db 2, 2, DIG
+	db 2, 3, DOUBLE_TEAM
+	db 2, 4, ROCK_SLIDE
+	db 3, 1, SURF
+	db 3, 2, HORN_DRILL
+	db 3, 3, BLIZZARD
+	db 3, 4, EARTHQUAKE
+	db 4, 1, HYPER_BEAM
+	db 4, 2, STOMP
+	db 4, 3, DOUBLE_TEAM
+	db 4, 4, STRENGTH
+	db 5, 1, STRENGTH
+	db 5, 2, MIMIC
+	db 5, 3, FLAMETHROWER
+	db 5, 4, SLASH
+	db 6, 1, CUT
+	db 6, 2, TWINEEDLE
+	db 6, 3, HYPER_BEAM
+	db 6, 4, MEGA_DRAIN
+	db 0
 	
+	db KAY, 1
+	db 1, 1, JUMP_KICK
+	db 1, 2, METRONOME
+	db 1, 3, STRENGTH
+	db 1, 4, ROLLING_KICK
+	db 2, 1, SURF
+	db 2, 2, HYDRO_PUMP
+	db 2, 3, THUNDERBOLT
+	db 2, 4, DRAGON_RAGE
+	db 3, 1, SURF
+	db 3, 2, BLIZZARD
+	db 3, 3, HARDEN
+	db 3, 4, PSYCHIC_M
+	db 4, 1, CUT
+	db 4, 2, ACID
+	db 4, 3, EARTHQUAKE
+	db 4, 4, FLAMETHROWER
+	db 5, 1, DOUBLE_TEAM
+	db 5, 2, TOXIC
+	db 5, 3, SOFTBOILED
+	db 5, 4, ICE_BEAM
+	db 6, 1, BODY_SLAM
+	db 6, 2, SKULL_BASH
+	db 6, 3, WATER_GUN
+	db 6, 4, HYPER_BEAM
+	db 0
+
+	db BBBBBa, 1
+	db 1, 1, PSYCHIC_M
+	db 1, 2, THUNDER
+	db 1, 3, FLY
+	db 1, 4, TRANSFORM
+	db 2, 1, STRENGTH
+	db 2, 2, THUNDERBOLT
+	db 2, 3, DOUBLE_TEAM
+	db 2, 4, REST
+	db 3, 1, BLIZZARD
+	db 3, 2, PSYCHIC_M
+	db 3, 3, LOVELY_KISS
+	db 3, 4, METRONOME
+	db 4, 1, DIG
+	db 4, 2, ROCK_SLIDE
+	db 4, 3, SLASH
+	db 4, 4, SWORDS_DANCE
+	db 5, 1, EARTHQUAKE
+	db 5, 2, BLIZZARD
+	db 5, 3, WATER_GUN
+	db 5, 4, BIDE
+	db 6, 1, FIRE_BLAST
+	db 6, 2, SEISMIC_TOSS
+	db 6, 3, CUT
+	db 6, 4, FISSURE
+	db 0
+
+	db ROCKETA, 1
+;	db 1, 1, 
+;	db 1, 2, 
+	db 1, 3, PSYCHIC_M
+;	db 1, 4, 
+;	db 2, 1, 
+;	db 2, 2, 
+	db 2, 3, TRI_ATTACK
+	db 2, 4, THUNDER_WAVE
+;	db 3, 1, 
+	db 3, 2, DIG
+;	db 3, 3, 
+;	db 3, 4, 
+;	db 4, 1, 
+;	db 4, 2, 
+;	db 4, 3, 
+	db 4, 4, SUBSTITUTE
+	db 5, 1, FLY
+;	db 5, 2, 
+;	db 5, 3, 
+;	db 5, 4, 
+;	db 6, 1, 
+;	db 6, 2, 
+	db 6, 3, DIG
+	db 6, 4, SWORDS_DANCE
+	db 0
+
 	db -1 ; end
