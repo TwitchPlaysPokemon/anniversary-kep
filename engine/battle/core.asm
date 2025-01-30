@@ -7146,9 +7146,14 @@ _LoadTrainerPic:
 	and a
 	jr nz, .useRed
 	ld a, [wTrainerClass]
+	cp ROCKETA ; After Lance, but uses a normal Rocket pic
+	jr z, .normalBank
+	cp CCC ; This and the next two use player pics
+	jr nc, .useRed
 	cp LANCE ; first trainer class in "Pics 10" - Rangi's code to load more trainer pics
 	ld a, Bank("Pics 10")
 	jr nc, .loadSprite
+.normalBank
 	ld a, Bank("Pics 6")
 	jr .loadSprite
 .useRed

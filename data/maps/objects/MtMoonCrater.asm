@@ -11,5 +11,6 @@ MtMoonCrater_Object:
 	object_event 32, 32, SPRITE_FOSSIL, STAY, NONE, 2, WING_FOSSIL
 	object_event 33, 16, SPRITE_FOSSIL, STAY, NONE, 3, HELIX_FOSSIL
 	object_event 45, 24, SPRITE_POKE_BALL, STAY, NONE, 4, MAX_ETHER
+	object_event 20, 41, SPRITE_RED, STAY, UP, 5, OPP_CCC, 1
 
 	def_warps_to MT_MOON_CRATER

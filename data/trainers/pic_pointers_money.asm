@@ -63,6 +63,6 @@ TrainerPicAndMoneyPointers::
 	pic_money KrisPic,         9900
 	pic_money RedPicFront,     9900
 	pic_money RedPicFront,     9900
-	pic_money RedPicFront,     9900
+	pic_money GreenPicFront,   9900
 	pic_money RocketPic,       9900
 	assert_table_length NUM_TRAINERS

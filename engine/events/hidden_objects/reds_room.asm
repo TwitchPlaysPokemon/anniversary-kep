@@ -14,11 +14,12 @@ RedBedroomPCText::
 	script_players_pc
 
 RedsBed:
-	CheckEvent EVENT_POST_GAME_ATTAINED
+ ;	CheckEvent EVENT_POST_GAME_ATTAINED
+	CheckEvent EVENT_BEAT_TPP_ROCKETA
 	ret z
 	ld a, $1
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
-	CheckEvent EVENT_BEAT_DREAM_RED
+	CheckEvent EVENT_BEAT_DREAM_KRIS
 	jr z, .warpToMtSilver
 	tx_pre_jump RedsBedDreamText ; "Was it just a dream?"
 
@@ -43,6 +44,10 @@ RedsBed:
 	ld c, 60
 	call DelayFrames
 	call GBPalNormal
+
+	ld a, HS_TPP_KRIS
+	ld [wMissableObjectIndex], a
+	predef ShowObject
 
 	tx_pre RedsBedMtSilverText ; "Later that night..."
 	ld a, MT_SILVER

@@ -18,5 +18,6 @@ CeruleanCave1F_Object:
 	object_event  7, 13, SPRITE_POKE_BALL, STAY, NONE, 1, FULL_RESTORE
 	object_event 19,  3, SPRITE_POKE_BALL, STAY, NONE, 2, MAX_ELIXER
 	object_event  5,  0, SPRITE_POKE_BALL, STAY, NONE, 3, NUGGET
+	object_event 24,  2, SPRITE_RED, STAY, DOWN, 4, OPP_KAY, 1
 
 	def_warps_to CERULEAN_CAVE_1F

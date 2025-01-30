@@ -17,7 +17,7 @@
 	const EVENT_USED_MASTER_BALL ; Used to determine Chief's dialogue in the end-game.
 	const EVENT_MYSTERY_BOX_ACTIVATED
 	const_skip 3
-	const EVENT_BEAT_DREAM_RED
+	const EVENT_BEAT_DREAM_KRIS
 	const_skip 6
 	const EVENT_GOT_TOWN_MAP
 	const EVENT_ENTERED_BLUES_HOUSE
@@ -56,6 +56,8 @@
 	const EVENT_BEAT_VIRIDIAN_GYM_TRAINER_7
 	const_skip 3
 	const EVENT_GIOVANNIS_ROOM_DOOR_UNLOCKED
+	const_skip 3
+	const EVENT_BEAT_TPP_ROCKETA
 
 ; Pewter City events
 	const_next $68
@@ -569,6 +571,7 @@
 	const EVENT_57E ; Jessie & James related.
 	const EVENT_GOT_DOME_FOSSIL
 	const EVENT_GOT_HELIX_FOSSIL
+	const EVENT_BEAT_TPP_CCC
 
 ; S.S. Anne events
 	const_next $5C0
@@ -614,7 +617,9 @@
 	const_skip 4
 	const EVENT_BEAT_ZAPDOSG
 	const_skip 7
-	const EVENT_BEAT_DRAGONITE 
+	const EVENT_BEAT_DRAGONITE
+	const_skip 7
+	const EVENT_BEAT_TPP_BBBBBa
 
 ; Celadon University, Salesman
 	const_next $650
@@ -783,6 +788,8 @@
 	const_next $8C0
 	const_skip
 	const EVENT_BEAT_MEWTWO
+	const_skip 7
+	const EVENT_BEAT_TPP_KAY
 
 ; Indigo Plateau events
 	const_next $8E0

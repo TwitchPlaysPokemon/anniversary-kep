@@ -24,9 +24,13 @@ TehUrn_TPPRed:
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	call GBFadeOutToBlack
-	ld a, HS_TPP_RED
+	ld a, HS_TPP_KRIS
 	ld [wMissableObjectIndex], a
 	predef HideObject
+	ld a, HS_TPP_CCC
+	ld [wMissableObjectIndex], a
+	predef ShowObject
+	ResetEvent EVENT_BEAT_TPP_CCC
 	call UpdateSprites
 	ld c, 30
 	call DelayFrames
@@ -55,7 +59,7 @@ MtSilver_TextPointers:
 MtSilver_TrainerHeaders:
 	def_trainers
 MtSilver_TrainerHeader:
-	trainer EVENT_BEAT_DREAM_RED, 0, Red12dots, Red3dots, Red12dots
+	trainer EVENT_BEAT_DREAM_KRIS, 0, Red12dots, Red3dots, Red12dots
 	db -1 ; end
 	
 TPPRedText:
@@ -65,7 +69,7 @@ TPPRedText:
 	jp TextScriptEnd
 	
 Red3dots:
-    text "start9"
+    text "CDOWN"
     prompt
     
 Red12dots:

@@ -11,5 +11,6 @@ FarawayIslandOutside_Object:
 	bg_event  4, 29, 1 ; Sign
 
 	def_object_events
+	object_event  3, 29, SPRITE_GREEN, STAY, RIGHT,  2, OPP_BBBBBa, 1
 
 	def_warps_to FARAWAY_ISLAND_OUTSIDE

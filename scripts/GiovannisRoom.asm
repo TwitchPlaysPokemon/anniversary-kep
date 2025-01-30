@@ -1,5 +1,6 @@
 GiovannisRoom_Script:
 	call EnableAutoTextBoxDrawing
+	ld hl, GiovannisRoom_TrainerHeaders
 	ld de, GiovannisRoom_ScriptPointers
 	ld a, [wGiovannisRoomCurScript]
 	call ExecuteCurMapScriptInTable
@@ -9,6 +10,7 @@ GiovannisRoom_Script:
 GiovannisRoom_ScriptPointers:
 	dw GiovannisRoomScript0
 	dw GiovannisRoomScript4
+	dw BeatTPPRocketA
 
 GiovannisRoomScript0:
 	ld a, [wYCoord]
@@ -111,6 +113,7 @@ GiovannisRoom_TextPointers:
 	dw GiovannisRoomText4
 	dw PickUpItemText
 	dw PickUpItemText
+	dw TPPRocketAText
 
 GiovannisRoomText1:
 	text_far _GiovannisRoomText1
@@ -127,3 +130,44 @@ GiovannisRoomText3:
 GiovannisRoomText4:
 	text_far _GiovannisRoomText4
 	text_end
+
+GiovannisRoom_TrainerHeaders:
+	def_trainers
+RocketATrainerHeader:
+	trainer EVENT_BEAT_TPP_ROCKETA, 0, RocketAIntroText, RocketAOutroText, RocketAIntroText
+	db -1 ; end
+
+TPPRocketAText:
+	text_asm
+	ld hl, RocketATrainerHeader
+	call TalkToTrainer
+	jp TextScriptEnd
+
+BeatTPPRocketA:
+	call EndTrainerBattle
+	ld a, [wIsInBattle]
+	cp $ff
+	jp z, ResetButtonPressedAndMapScript
+	ld a, $f0
+	ld [wJoyIgnore], a
+	call GBFadeOutToBlack
+	ld a, HS_TPP_ROCKETA
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ResetEvent EVENT_BEAT_DREAM_KRIS
+	call UpdateSprites
+	ld c, 30
+	call DelayFrames
+	call GBFadeInFromBlack
+	xor a
+	ld [wJoyIgnore], a
+	jp PlayDefaultMusicFadeOutCurrent
+
+RocketAOutroText:
+	text "A"
+	prompt
+
+RocketAIntroText:
+	text "…"
+	line "…"
+	done

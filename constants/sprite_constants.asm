@@ -52,11 +52,11 @@
 	const SPRITE_FISHER                  ; $2f
 	const SPRITE_KOGA                    ; $30
 	const SPRITE_GUARD                   ; $31
-	const SPRITE_UNUSED_RED_2            ; $32
+	const SPRITE_GREEN                   ; $32
 	const SPRITE_MOM                     ; $33
 	const SPRITE_BALDING_GUY             ; $34
 	const SPRITE_LITTLE_BOY              ; $35
-	const SPRITE_UNUSED_RED_3            ; $36
+	const SPRITE_TEAL                    ; $36
 	const SPRITE_GAMEBOY_KID             ; $37
 	const SPRITE_FAIRY                   ; $38
 	const SPRITE_AGATHA                  ; $39

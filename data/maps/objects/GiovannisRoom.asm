@@ -14,5 +14,6 @@ GiovannisRoom_Object:
 	object_event 14, 24, SPRITE_PAPER, STAY, RIGHT, 4
 	object_event 18,  4, SPRITE_POKE_BALL, STAY, NONE, 5, TM_EARTHQUAKE
 	object_event  5, 22, SPRITE_POKE_BALL, STAY, NONE, 6, PROTECTOR
+	object_event 18,  8, SPRITE_ROCKET, STAY, LEFT, 7, OPP_ROCKETA, 1
 
 	def_warps_to GIOVANNIS_ROOM

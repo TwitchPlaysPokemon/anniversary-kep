@@ -120,7 +120,7 @@ MapHSPointers:
 	dw NoHS
 	dw NoHS
 	dw NoHS
-	dw NoHS
+	dw FarawayIslandOutsideHS
 	dw FarawayIslandInsideHS
 	dw PokemonMansionB2FHS
 	dw MtMoonCraterHS
@@ -257,7 +257,7 @@ MapHSPointers:
 	dw NoHS 
 	dw NoHS
 	dw BrunswickGladeHS
-	dw NoHS
+	dw MtSilverHS
 	assert_table_length NUM_MAPS
 	dw -1 ; end
 
@@ -353,6 +353,7 @@ CeruleanCaveHS:
 	db CERULEAN_CAVE_1F, $01, SHOW            ; HS_CERULEAN_CAVE_1F_ITEM_1
 	db CERULEAN_CAVE_1F, $02, SHOW            ; HS_CERULEAN_CAVE_1F_ITEM_2
 	db CERULEAN_CAVE_1F, $03, SHOW            ; HS_CERULEAN_CAVE_1F_ITEM_3
+	db CERULEAN_CAVE_1F, $04, HIDE            ; HS_TPP_KAY
 CelesteHillHS:
 	db CELESTE_HILL, $01, SHOW                ; HS_MOLTRES_G
 PokemonTower2FHS:
@@ -564,6 +565,8 @@ SeafoamIslandsB4FHS:
 	db SEAFOAM_ISLANDS_B4F, $03, SHOW         ; HS_ARTICUNO
 FarawayIslandInsideHS:
 	db FARAWAY_ISLAND_INSIDE, $01, SHOW       ; HS_MEW
+FarawayIslandOutsideHS:
+	db FARAWAY_ISLAND_OUTSIDE, $01, HIDE      ; HS_TPP_BBBBBa
 PokemonMansionB2FHS:
 	db POKEMON_MANSION_B2F, $03, SHOW         ; HS_POKEMON_MANSION_B2F_ITEM_1
 	db POKEMON_MANSION_B2F, $04, SHOW         ; HS_POKEMON_MANSION_B2F_ITEM_2
@@ -572,9 +575,11 @@ MtMoonCraterHS:
 	db MT_MOON_CRATER, $02, SHOW              ; HS_MT_MOON_CRATER_ITEM_2
 	db MT_MOON_CRATER, $03, SHOW              ; HS_MT_MOON_CRATER_ITEM_3
 	db MT_MOON_CRATER, $04, SHOW              ; HS_MT_MOON_CRATER_ITEM_4
+	db MT_MOON_CRATER, $05, HIDE              ; HS_TPP_CCC
 GiovannisRoomHS:
 	db GIOVANNIS_ROOM, $05, SHOW              ; HS_GIOVANNIS_ROOM_ITEM_1
 	db GIOVANNIS_ROOM, $06, SHOW              ; HS_GIOVANNIS_ROOM_ITEM_2
+	db GIOVANNIS_ROOM, $07, HIDE              ; HS_TPP_ROCKETA
 RockTunnelB1FHS:
 	db ROCK_TUNNEL_B1F, $0A, SHOW             ; HS_ROCK_TUNNEL_B1F_DOME
 	db ROCK_TUNNEL_B1F, $0B, SHOW             ; HS_ROCK_TUNNEL_B1F_HELIX
@@ -595,5 +600,5 @@ BrunswickGladeHS:
 CinnabarVolcanoFloorsHS:
 	db CINNABAR_VOLCANO_FLOORS, $05, SHOW
 MtSilverHS:
-	db MT_SILVER, $01, SHOW					 ; HS_TPP_RED
+	db MT_SILVER, $01, HIDE					 ; HS_TPP_KRIS
 	assert_table_length NUM_HS_OBJECTS

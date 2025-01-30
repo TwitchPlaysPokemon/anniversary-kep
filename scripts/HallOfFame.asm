@@ -139,11 +139,8 @@ PostGameSetup:
 ; Here, we check if a Pokemon is owned, and if it is, we reset their events.
 ; It's really suboptimal and I think there is a way to make it better.
 ResetLegendaryPokemon:
-	CheckEvent EVENT_BEAT_DREAM_RED
-	jr nz, .skipDreamRed
-	ResetEvent EVENT_BEAT_DREAM_RED ; Re-enable Dream Red fight
-	ld a, HS_TPP_RED
-	call ShowThis ; And restore the hide/show.
+	ld a, HS_TPP_CCC
+	call ShowThis ; Show ))) at Mt. Moon Crater.
 .skipDreamRed
 	ld a, DEX_ARTICUNO ; Load dex number
 	call HoFIsPokemonBitSet ; Is it owned?

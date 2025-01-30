@@ -2128,7 +2128,9 @@ wSeafoamIslandsB4FCurScript:: db
 wRoute18Gate1FCurScript:: db
 wBattleTentCurScript:: db
 wGiovannisRoomCurScript:: db
-	ds 4
+wCeruleanCave1FCurScript:: db
+wFarawayIslandOutsideCurScript:: db
+	ds 2
 wGameProgressFlagsEnd::
 
 UNION
