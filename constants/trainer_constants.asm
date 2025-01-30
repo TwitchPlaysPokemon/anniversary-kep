@@ -1,4 +1,4 @@
-DEF OPP_ID_OFFSET EQU 195
+DEF OPP_ID_OFFSET EQU 0 ; Was only used in KEP for music check, now also fixed
 
 MACRO trainer_const
 	const \1

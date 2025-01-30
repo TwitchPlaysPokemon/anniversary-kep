@@ -13,37 +13,10 @@ PlayBattleMusic::
 	ld a, MUSIC_GYM_LEADER_BATTLE
 	jp .playSong
 .notGymLeaderBattle
-	ld a, [wCurOpponent] ; This can probably be made better with a list thing but uhhh idk how to do it. seethe.
-	cp MEWTWO ; Needs to be before OPP_ID_OFFSET to skip the wild check.
-	jp z, .mewtwoBattle
-	cp ARTICUNO
-	jp z, .legendaryBattle
-	cp ZAPDOS
-	jp z, .legendaryBattle
-	cp MOLTRES
-	jp z, .legendaryBattle
-	cp MEW
-	jp z, .legendaryBattle
-	cp OMEGADGE
-	jp z, .legendaryBattle
-	cp ARCANINE
-	jp z, .legendaryBattle
-	cp SNORLAX ; Just like LGPE. Snorlax is basically a legendary in RBY, so I love this.
-	jp z, .legendaryBattle
-	cp DRATINI ; In the Tajiri lore, the Dratini family is considered legendary. Also, we have a static Dragonite. I think the appearance of Dratini in the Safari Zone with this theme could also add some reeeeeal nice hype to the whole ordeal.
-	jp z, .legendaryBattle
-	cp DRAGONAIR
-	jp z, .legendaryBattle
-	cp DRAGONITE
-	jp z, .legendaryBattle
-	cp ARTICUNO_G
-	jp z, .birdsBattle
-	cp ZAPDOS_G
-	jp z, .birdsBattle
-	cp MOLTRES_G
-	jp z, .birdsBattle
-	cp OPP_ID_OFFSET
-	jp c, .wildBattle
+	ld a, [wIsTrainerBattle] ; check if this is a trainer battle
+	and a
+	ld a, [wCurOpponent]
+	jp z, .wildBattle
 	cp OPP_YUJIROU
 	jp z, .GymBattle
 	cp OPP_KOICHI
@@ -126,6 +99,34 @@ PlayBattleMusic::
 	ld a, MUSIC_GALAR_BIRDS
 	jr .playSong
 .wildBattle
+	cp MEWTWO
+	jr z, .mewtwoBattle
+	cp ARTICUNO
+	jr z, .legendaryBattle
+	cp ZAPDOS
+	jr z, .legendaryBattle
+	cp MOLTRES
+	jr z, .legendaryBattle
+	cp MEW
+	jr z, .legendaryBattle
+	cp OMEGADGE
+	jr z, .legendaryBattle
+	cp ARCANINE
+	jr z, .legendaryBattle
+	cp SNORLAX ; Just like LGPE. Snorlax is basically a legendary in RBY, so I love this.
+	jr z, .legendaryBattle
+	cp DRATINI ; In the Tajiri lore, the Dratini family is considered legendary. Also, we have a static Dragonite. I think the appearance of Dratini in the Safari Zone with this theme could also add some reeeeeal nice hype to the whole ordeal.
+	jr z, .legendaryBattle
+	cp DRAGONAIR
+	jr z, .legendaryBattle
+	cp DRAGONITE
+	jr z, .legendaryBattle
+	cp ARTICUNO_G
+	jr z, .birdsBattle
+	cp ZAPDOS_G
+	jr z, .birdsBattle
+	cp MOLTRES_G
+	jr z, .birdsBattle
 	ld a, MUSIC_WILD_BATTLE
 .playSong
 	jp PlayMusic
