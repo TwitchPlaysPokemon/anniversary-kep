@@ -13,13 +13,12 @@ FarawayIslandOutside_ScriptPointers:
 	dw BeatTPPBBBBBa
 
 FarawayIslandOutside_TextPointers:
-	dw FarawayIslandSign
 	dw TPPBBBBBaText
+	dw FarawayIslandSign
 
 FarawayIslandSign:
 	text_far _FarawayIslandSign
-
-	text_end ; unused
+	text_end
 
 FarawayIslandOutsideTrainerHeaders:
 	def_trainers

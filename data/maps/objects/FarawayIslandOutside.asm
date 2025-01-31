@@ -8,9 +8,9 @@ FarawayIslandOutside_Object:
 	warp_event 19,  8, FARAWAY_ISLAND_INSIDE, 2
 
 	def_bg_events
-	bg_event  4, 29, 1 ; Sign
+	bg_event  4, 29, 2 ; Sign
 
 	def_object_events
-	object_event  3, 29, SPRITE_GREEN, STAY, RIGHT,  2, OPP_BBBBBa, 1
+	object_event  3, 29, SPRITE_GREEN, STAY, RIGHT,  1, OPP_BBBBBa, 1
 
 	def_warps_to FARAWAY_ISLAND_OUTSIDE
