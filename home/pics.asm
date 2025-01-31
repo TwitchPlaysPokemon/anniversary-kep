@@ -9,8 +9,8 @@ UncompressMonSprite::
 	ld a, [hl]
 	ld [wSpriteInputPtr+1], a
 	ld a, [wcf91]
-	cp FOSSIL_KABUTOPS
-	jr z, .RecallBank
+	; cp FOSSIL_KABUTOPS
+	; jr z, .RecallBank
 	cp FOSSIL_AERODACTYL
 	jr z, .RecallBank
 	cp MON_GHOST
@@ -18,7 +18,7 @@ UncompressMonSprite::
 	ld a, [wMonHPicBank]
 	jr .GotBank
 .RecallBank
-	ld a, BANK(FossilKabutopsPic)
+	ld a, BANK(FossilAerodactylPic)
 .GotBank
 	jp UncompressSpriteData
 

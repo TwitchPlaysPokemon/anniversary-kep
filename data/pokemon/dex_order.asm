@@ -251,7 +251,7 @@ PokedexOrder:
 	db DEX_TAUROS_PA
 	db DEX_TAUROS_PB
 	db DEX_GORILLAIMO
-	db 0 ; MISSINGNO.
+	db DEX_PHANCERO
 	db 0 ; MISSINGNO.
 	db 0 ; MISSINGNO.
 	assert_table_length NUM_POKEMON_INDEXES

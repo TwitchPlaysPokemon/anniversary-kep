@@ -998,6 +998,16 @@ _GorillaimoDexEntry::
 	next "battling GAWARHED"
 	dex
 
+_PhanceroDexEntry::
+	text "A lost bird that"
+	next "creates illusions"
+	next "to protect itself."
+
+	page "Has only been seen"
+	next "during unusual"
+	next "circumstances"
+	dex
+
 _MissingNoDexEntry::	; unused
 	text "This is a newly"
 	next "discovered"

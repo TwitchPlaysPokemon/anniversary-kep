@@ -11,7 +11,7 @@ AerodactylFossilText::
 	text_end
 
 KabutopsFossil:
-	ld a, FOSSIL_KABUTOPS
+	ld a, KABUTO
 	ld [wcf91], a
 	call DisplayMonFrontSpriteInBox
 	call EnableAutoTextBoxDrawing

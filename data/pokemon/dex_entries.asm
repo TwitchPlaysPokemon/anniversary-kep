@@ -251,7 +251,7 @@ PokedexEntryPointers:
 	dw TaurosPADexEntry
 	dw TaurosPBDexEntry
 	dw GorillaimoDexEntry
-	dw MissingNoDexEntry
+	dw PhanceroDexEntry
 	dw MissingNoDexEntry
 	dw MissingNoDexEntry
 	assert_table_length NUM_POKEMON_INDEXES
@@ -2025,3 +2025,9 @@ GorillaimoDexEntry:
 	text_far _GorillaimoDexEntry
 	text_end
 	
+PhanceroDexEntry:
+	db "GLITCHBIRD@"
+	db 5,1
+	dw 1032
+	text_far _PhanceroDexEntry
+	text_end

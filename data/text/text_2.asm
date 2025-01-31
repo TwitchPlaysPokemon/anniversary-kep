@@ -607,7 +607,7 @@ _AerodactylFossilText::
 	done
 
 _KabutopsFossilText::
-	text "KABUTOPS Fossil"
+	text "KABUTO Fossil"
 	line "A primitive and"
 	cont "rare #MON."
 	done

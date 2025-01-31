@@ -258,7 +258,7 @@
 	const TAUROS_PA          ; $F9
 	const TAUROS_PB          ; $FA
 	const GORILLAIMO         ; $FB
-	const FOSSIL_KABUTOPS    ; $FC	(was B6)
+	const PHANCERO           ; $FC
 	const FOSSIL_AERODACTYL  ; $FD	(was B7)
 	const MON_GHOST          ; $FE	(was B8)
 	

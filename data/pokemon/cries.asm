@@ -260,7 +260,7 @@ CryData::
 	mon_cry SFX_CRY_1D, $11, $40 ; Tauros-PA
 	mon_cry SFX_CRY_1D, $11, $40 ; Tauros-PB
 	mon_cry SFX_CRY_00, $00, $00 ; Gorillaimo
-	mon_cry SFX_CRY_18, $EE, $01 ; MissingNo. (Kabutops Fossil)
+	mon_cry SFX_CRY_18, $1F, $80 ; Phancero
 	mon_cry SFX_CRY_23, $20, $F0 ; MissingNo. (Aerodactyl Fossil)
 	mon_cry SFX_CRY_06, $00, $00 ; MissingNo. (Ghost)
 	assert_table_length NUM_POKEMON_INDEXES

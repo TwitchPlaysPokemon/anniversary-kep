@@ -472,7 +472,10 @@ PerrserkerPicBack::    INCBIN "gfx/pokemon/back/perrserkerb.pic"
 MrRimePicFront::       INCBIN "gfx/pokemon/front/mr.rime.pic"
 MrRimePicBack::        INCBIN "gfx/pokemon/back/mr.rimeb.pic"
 
-FossilKabutopsPic::    INCBIN "gfx/pokemon/front/fossilkabutops.pic"
+PhanceroPicFront::     INCBIN "gfx/pokemon/front/phancero.pic"
+PhanceroPicBack::      INCBIN "gfx/pokemon/back/phancerob.pic"
+
+; FossilKabutopsPic::    INCBIN "gfx/pokemon/front/fossilkabutops.pic"
 FossilAerodactylPic::  INCBIN "gfx/pokemon/front/fossilaerodactyl.pic"
 GhostPic::             INCBIN "gfx/battle/ghost.pic"
 
