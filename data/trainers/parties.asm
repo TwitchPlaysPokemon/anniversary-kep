@@ -57,6 +57,7 @@ TrainerDataPointers:
 	dw CCCData
 	dw KAYData
 	dw BBBBBaData
+	dw ASHData
 	dw RocketAData
 	assert_table_length NUM_TRAINERS
 

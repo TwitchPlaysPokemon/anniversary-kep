@@ -61,5 +61,6 @@ TrainerAIPointers:
 	dbw 3, LanceAI ; CCC
 	dbw 3, Rival3AI ; KAY
 	dbw 3, LanceAI ; BBBBBa
+	dbw 3, LanceAI ; ASH
 	dbw 3, LanceAI ; ROCKETA
 	assert_table_length NUM_TRAINERS

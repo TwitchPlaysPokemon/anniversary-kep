@@ -57,5 +57,6 @@ TrainerNames::
 	li ")))"
 	li "KAY"
 	li "BBBBBa"
+	li "ASH"
 	li "ROCKET A"
 	assert_list_length NUM_TRAINERS

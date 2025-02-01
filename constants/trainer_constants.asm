@@ -72,5 +72,6 @@ ENDM
 	trainer_const CCC            ; $38
 	trainer_const KAY            ; $39
 	trainer_const BBBBBa         ; $3A
-	trainer_const ROCKETA        ; $3B
+	trainer_const ASH            ; $3B
+	trainer_const ROCKETA        ; $3C
 DEF NUM_TRAINERS EQU const_value - 1

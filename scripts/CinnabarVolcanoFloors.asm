@@ -10,9 +10,10 @@ CinnabarVolcanoFloors_Script:
 CinnabarVolcanoFloors_ScriptPointers:
 	dw CheckFightingMapTrainers
 	dw DisplayEnemyTrainerTextAndStartBattle
-	dw EndTrainerBattle
+	dw BeatTPPASH
 
 CinnabarVolcanoFloors_TextPointers:
+	dw TPPASHText
 	dw CinnabarVolcanoFloorsText1
 	dw CinnabarVolcanoFloorsText2
 	dw CinnabarVolcanoFloorsText3
@@ -29,6 +30,8 @@ CinnabarVolcanoFloors_TextPointers:
 	
 CinnabarVolcanoFloorsTrainerHeaders:
 	def_trainers
+TPPASHTrainerHeader:
+	trainer EVENT_BEAT_TPP_ASH, 0, ASHIntroText, ASHOutroText, ASHIntroText
 CinnabarVolcanoFloorsTrainerHeader0:
 	trainer EVENT_BEAT_CINNABAR_VOLCANO_TRAINER_1, 2, CinnabarVolcanoFloorsBattleText1, CinnabarVolcanoFloorsEndBattleText1, CinnabarVolcanoFloorsAfterBattleText1
 CinnabarVolcanoFloorsTrainerHeader1:
@@ -111,4 +114,44 @@ CinnabarVolcanoFloorsAfterBattleText4:
 	text_far _CinnabarVolcanoFloorsAfterBattleText4
 	text_end
 
-	text_end ; unused
+TPPASHText:
+	text_asm
+	ld hl, TPPASHTrainerHeader
+	call TalkToTrainer
+	jp TextScriptEnd
+
+BeatTPPASH:
+	ld a, [wTrainerClass]
+	cp ASH
+	jp nz, EndTrainerBattle
+	call EndTrainerBattle
+	ld a, [wIsInBattle]
+	cp $ff
+	jp z, ResetButtonPressedAndMapScript
+	call UpdateSprites
+	ld a, $f0
+	ld [wJoyIgnore], a
+	call GBFadeOutToBlack
+	ld a, HS_TPP_ASH
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_TPP_ROCKETA
+	ld [wMissableObjectIndex], a
+	predef ShowObject
+	ResetEvent EVENT_BEAT_TPP_ROCKETA
+	call UpdateSprites
+	ld c, 30
+	call DelayFrames
+	call GBFadeInFromBlack
+	xor a
+	ld [wJoyIgnore], a
+	jp PlayDefaultMusicFadeOutCurrent
+
+ASHOutroText:
+	text "SELECT"
+	prompt
+
+ASHIntroText:
+	text "B"
+	line "…"
+	done

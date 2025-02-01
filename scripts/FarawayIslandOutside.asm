@@ -44,10 +44,10 @@ BeatTPPBBBBBa:
 	ld a, HS_TPP_BBBBBa
 	ld [wMissableObjectIndex], a
 	predef HideObject
-	ld a, HS_TPP_ROCKETA
+	ld a, HS_TPP_ASH
 	ld [wMissableObjectIndex], a
 	predef ShowObject
-	ResetEvent EVENT_BEAT_TPP_ROCKETA
+	ResetEvent EVENT_BEAT_TPP_ASH
 	call UpdateSprites
 	ld c, 30
 	call DelayFrames

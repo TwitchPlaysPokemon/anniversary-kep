@@ -1697,6 +1697,33 @@ SpecialTrainerMoves:
 	db 6, 4, FISSURE
 	db 0
 
+	db ASH, 1
+	db 1, 1, THUNDERBOLT
+	db 1, 2, BODY_SLAM
+	db 1, 3, SURF
+	db 1, 4, ICE_BEAM
+	db 2, 1, STRENGTH
+	db 2, 2, MEGA_DRAIN
+	db 2, 3, WRAP
+	db 2, 4, GLARE
+	db 3, 1, DIG
+	db 3, 2, ROCK_SLIDE
+	db 3, 3, BIND
+	db 3, 4, EXPLOSION
+	db 4, 1, PETAL_DANCE
+	db 4, 2, ABSORB
+	db 4, 3, CUT
+	db 4, 4, SLEEP_POWDER
+	; db 5, 1, 
+	; db 5, 2, 
+	; db 5, 3, 
+	; db 5, 4, 
+	db 6, 1, PSYCHIC_M
+	db 6, 2, HEADBUTT
+	db 6, 3, DOUBLE_TEAM
+	db 6, 4, METRONOME
+	db 0
+
 	db ROCKETA, 1
 ;	db 1, 1, 
 ;	db 1, 2, 

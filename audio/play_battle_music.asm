@@ -63,6 +63,8 @@ PlayBattleMusic::
 	jr z, .finalBattle 
 	cp OPP_BBBBBa
 	jr z, .finalBattle 
+	cp OPP_ASH
+	jr z, .finalBattle 
 	cp OPP_ROCKETA
 	jr z, .Giovanni 
 	cp OPP_KRIS
