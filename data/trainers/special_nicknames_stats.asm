@@ -59,7 +59,7 @@ SpecialTrainerNicknamesStats::
 
     db ROCKETA, 1 ; I took the higher of special attack/special defense for spc
     ;              nickname,      hp, atk, def, spc, spd
-    mon_nick_stats "MMMMMC, fA", 247, 176, 162, 212, 200 ; TODO: This is Latios, plsfix
+    mon_nick_stats "MMMMMC, fA", 454, 302, 172, 185, 287 
     mon_nick_stats "Guhn??",     190, 156, 196, 222, 125
     mon_nick_stats "S IIvoocb",  210, 254, 136, 208, 137
     mon_nick_stats "JOE",        271, 233, 176, 191, 153
