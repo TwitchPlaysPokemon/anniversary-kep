@@ -96,19 +96,19 @@ ReadTrainer:
 .loopAdditionalMoveData
 	ld a, [hli]
 	cp $ff
-	jr z, .FinishUp
+	jr z, .checkNicknamesStats
 	cp b
-	jr nz, .asm_39c46
+	jr nz, .findNextEntry
 	ld a, [hli]
 	cp c
-	jr nz, .asm_39c46
+	jr nz, .findNextEntry
 	ld d, h
 	ld e, l
 .writeAdditionalMoveDataLoop
 	ld a, [de]
 	inc de
 	and a
-	jp z, .FinishUp
+	jp z, .checkNicknamesStats
 	dec a
 	ld hl, wEnemyMon1Moves
 	ld bc, wEnemyMon2 - wEnemyMon1
@@ -123,11 +123,73 @@ ReadTrainer:
 	inc de
 	ld [hl], a
 	jr .writeAdditionalMoveDataLoop
-.asm_39c46
+.findNextEntry
 	ld a, [hli]
 	and a
-	jr nz, .asm_39c46
+	jr nz, .findNextEntry
 	jr .loopAdditionalMoveData
+.checkNicknamesStats
+	ld a, [wTrainerClass]
+	ld b, a
+	ld a, [wTrainerNo]
+	ld c, a
+	ld hl, SpecialTrainerNicknamesStats
+	ld de, NICKNAME_TRAINER_BYTES - 1
+.findTrainerClass
+	ld a, [hli]
+	cp $ff
+	jr z, .FinishUp
+	cp b
+	jr z, .foundClass
+	add hl, de
+	jr .findTrainerClass
+.foundClass
+	ld a, [hl]
+	cp c
+	jr z, .foundParty
+	add hl, de
+	jr .findTrainerClass
+.foundParty
+	inc hl
+	FOR n, 1, PARTY_LENGTH + 1
+		DEF partyMember = PARTY_LENGTH + 1 - n
+		ld bc, wEnemyMon{d:partyMember}Stats
+		push bc
+		ld bc, wEnemyMon{d:partyMember}HP
+		push bc
+		ld bc, wEnemyMon{d:partyMember}Nick
+		push bc
+	ENDR
+	ld a, PARTY_LENGTH
+.updatePartyMember
+	ld [wTrainerHasNicknames], a
+	pop de
+	; hl: start of party member nickname; de: wEnemyMonNNick
+	ld bc, NAME_LENGTH
+	call CopyData
+	; hl: start of party member HP stat
+	ld d, h
+	ld e, l
+	ld a, [hli]
+	ld b, a
+	ld a, [hl]
+	ld c, a
+	pop hl
+	; hl: wEnemyMonNHP
+	ld a, b
+	ld [hli], a
+	ld a, c
+	ld [hl], a
+	ld h, d
+	ld l, e
+	pop de
+	; hl: start of party member stats; de: wEnemyMonNStats
+	ld bc, NICKNAME_MON_BYTES - NAME_LENGTH
+	call CopyData
+	ld a, [wTrainerHasNicknames]
+	dec a
+	and a
+	jr nz, .updatePartyMember ; leaving wTrainerHasNicknames at 1
 .FinishUp
 ; clear wAmountMoneyWon addresses
 	xor a

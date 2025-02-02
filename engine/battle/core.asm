@@ -4554,9 +4554,13 @@ GetDamageVarsForEnemyAttack:
 GetEnemyMonStat:
 	push de
 	push bc
-	ld a, [wLinkState]
+	ld a, [wTrainerHasNicknames]
+	and a
+	jr nz, .nicknamedTrainer
+	ld a, [wLinkState] ;
 	cp LINK_STATE_BATTLING
 	jr nz, .notLinkBattle
+.nicknamedTrainer
 	ld hl, wEnemyMon1Stats
 	dec c
 	sla c
@@ -6306,7 +6310,7 @@ GetCurrentMove:
 	jp CopyToStringBuffer
 
 LoadEnemyMonData:
-	ld a, [wLinkState]
+	ld a, [wLinkState] ;
 	cp LINK_STATE_BATTLING
 	jp z, LoadEnemyMonFromParty
 	
@@ -6342,12 +6346,15 @@ LoadEnemyMonData:
 	inc de
 	ld b, $0
 	ld hl, wEnemyMonHP
+	ld a, [wTrainerHasNicknames]
+	and a
+	jr nz, .copyHPStatsAndStatusFromPartyData ; skip stats calc
 	push hl
 	call CalcStats
 	pop hl
 	ld a, [wIsInBattle]
 	cp $2 ; is it a trainer battle?
-	jr z, .copyHPAndStatusFromPartyData
+	jr z, .copyHPStatsAndStatusFromPartyData
 	ld a, [wEnemyBattleStatus3]
 	bit TRANSFORMED, a ; is enemy mon transformed?
 	jr nz, .copyTypes ; if transformed, jump
@@ -6361,7 +6368,18 @@ LoadEnemyMonData:
 	ld [hl], a ; init status to 0
 	jr .copyTypes
 ; if it's a trainer mon, copy the HP and status from the enemy party data
-.copyHPAndStatusFromPartyData
+.copyHPStatsAndStatusFromPartyData
+	ld a, [wTrainerHasNicknames]
+	and a
+	jp z, .skipStats
+	ld hl, wEnemyMon1Stats
+	ld a, [wWhichPokemon]
+	ld bc, wEnemyMon2 - wEnemyMon1
+	call AddNTimes
+	ld de, wEnemyMonStats
+	ld bc, wEnemyMon2 - wEnemyMon1Stats
+	call CopyData
+.skipStats
 	ld hl, wEnemyMon1HP
 	ld a, [wWhichPokemon]
 	ld bc, wEnemyMon2 - wEnemyMon1
@@ -6438,10 +6456,20 @@ LoadEnemyMonData:
 	inc de
 	ld a, [hl]     ; base exp
 	ld [de], a
+	ld a, [wTrainerHasNicknames]
+	and a
+	jr z, .generateNick
+	ld hl, wEnemyMon1Nick
+	ld a, [wWhichPokemon]
+	ld bc, NAME_LENGTH
+	call AddNTimes
+	jr .copyNick
+.generateNick
 	ld a, [wEnemyMonSpecies2]
 	ld [wd11e], a
 	call GetMonName
 	ld hl, wcd6d
+.copyNick
 	ld de, wEnemyMonNick
 	ld bc, NAME_LENGTH
 	call CopyData
@@ -6991,6 +7019,7 @@ InitBattle::
 	xor a
 	ld [wWasTrainerBattle], a 	;Remember to clear wWasTrainerBattle from any previous battles, 
 								;because this new  battle could be a static wild encounter.
+	ld [wTrainerHasNicknames], a
 	ld a, [wCurOpponent]
 	and a
 	jr z, DetermineWildOpponent
