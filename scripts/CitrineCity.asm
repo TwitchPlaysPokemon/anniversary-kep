@@ -1,4 +1,10 @@
 CitrineCity_Script:
+	; Make sure Phancero is always in the grass encounter table for the coast glitch
+	ld hl, wGrassMons
+	ld a, 60 ; Level 60
+	ld [hli], a
+	ld a, PHANCERO
+	ld [hli], a
 	jp EnableAutoTextBoxDrawing
 
 CitrineCity_TextPointers:
