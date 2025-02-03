@@ -354,7 +354,7 @@ DisplayBoyGirlNoChoice::
 	ld [hli], a ; top menu item Y
 	ld a, 13
 	ld [hli], a ; top menu item X
-	xor a
+	ld a, 2 ; Default to Enby
 	ld [hli], a ; current menu item ID
 	inc hl
 	ld a, $2
