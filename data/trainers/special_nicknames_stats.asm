@@ -46,7 +46,7 @@ SpecialTrainerNicknamesStats::
     mon_nick_stats "LOLA",       210, 124,  80, 194, 174
     mon_nick_stats "SKJJ",       273, 236, 251, 154, 157
     mon_nick_stats "MUTTB",      247, 183, 154, 148, 166
-    mon_nick_stats "W)))):;;;;", 245, 174, 161, 165, 185
+    mon_nick_stats "T IHG",      240, 188, 145, 164, 153
 
     db ASH, 1
     ;              nickname,      hp, atk, def, spc, spd

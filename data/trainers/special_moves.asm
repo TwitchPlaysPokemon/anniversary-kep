@@ -1691,10 +1691,10 @@ SpecialTrainerMoves:
 	db 5, 2, BLIZZARD
 	db 5, 3, WATER_GUN
 	db 5, 4, BIDE
-	db 6, 1, FIRE_BLAST
-	db 6, 2, SEISMIC_TOSS
-	db 6, 3, CUT
-	db 6, 4, FISSURE
+	db 6, 1, SURF
+	db 6, 2, HYPER_BEAM
+	db 6, 3, MIMIC
+	db 6, 4, TOXIC
 	db 0
 
 	db ASH, 1
@@ -1714,10 +1714,10 @@ SpecialTrainerMoves:
 	db 4, 2, ABSORB
 	db 4, 3, CUT
 	db 4, 4, SLEEP_POWDER
-	; db 5, 1, 
-	; db 5, 2, 
-	; db 5, 3, 
-	; db 5, 4, 
+;   db 5, 1, FLY
+;   db 5, 2, EARTHQUAKE
+;   db 5, 3, SUBMISSION
+;   db 5, 4, TRI_ATTACK
 	db 6, 1, PSYCHIC_M
 	db 6, 2, HEADBUTT
 	db 6, 3, DOUBLE_TEAM
@@ -1725,28 +1725,28 @@ SpecialTrainerMoves:
 	db 0
 
 	db ROCKETA, 1
-;	db 1, 1, 
-;	db 1, 2, 
+;	db 1, 1, DRILL_PECK
+;	db 1, 2, ICE_BEAM
 	db 1, 3, PSYCHIC_M
-;	db 1, 4, 
-;	db 2, 1, 
-;	db 2, 2, 
+;	db 1, 4, AMNESIA
+;	db 2, 1, THUNDERBOLT
+;	db 2, 2, IRON_HEAD
 	db 2, 3, TRI_ATTACK
 	db 2, 4, THUNDER_WAVE
-;	db 3, 1, 
+;	db 3, 1, FLAMETHROWER
 	db 3, 2, DIG
-;	db 3, 3, 
+;	db 3, 3, RECOVER
 ;	db 3, 4, 
-;	db 4, 1, 
-;	db 4, 2, 
-;	db 4, 3, 
+;	db 4, 1, SURF
+;	db 4, 2, ICE_BEAM
+;	db 4, 3, AGILITY
 	db 4, 4, SUBSTITUTE
 	db 5, 1, FLY
-;	db 5, 2, 
-;	db 5, 3, 
+;	db 5, 2, SLUDGE
+;	db 5, 3, NIGHT_SLASH
 ;	db 5, 4, 
-;	db 6, 1, 
-;	db 6, 2, 
+;	db 6, 1, BODY_SLAM
+;	db 6, 2, KOWTOW_CLEAVE
 	db 6, 3, DIG
 	db 6, 4, SWORDS_DANCE
 	db 0
