@@ -258,7 +258,6 @@ BattleTent_InitPhase:
 	jr .done
 .cont
 	ld a, 4
-	jr .done
 .done
 	ld [wBattleTentCurScript], a
 	ret
@@ -312,7 +311,7 @@ BattleTent_InitBattle:
 	ld bc, 3
 	call AddNTimes
 	ld a, [hl] ; get trainer class
-	add $c8
+	add OPP_ID_OFFSET
 	ld [wCurOpponent], a
 	xor a
 	ld [wTrainerNo], a
