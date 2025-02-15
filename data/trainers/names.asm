@@ -54,7 +54,7 @@ TrainerNames::
 	li "JESSIE&JAMES"
 	li "GIOVANNI"
 	li "AMANDA"
-	li ")))"
+	li "((("
 	li "KAY"
 	li "BBBBBa"
 	li "ASH"
