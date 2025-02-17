@@ -15,7 +15,7 @@ RedBedroomPCText::
 
 RedsBed:
  ;	CheckEvent EVENT_POST_GAME_ATTAINED
-	CheckEvent EVENT_BEAT_TPP_ROCKETA
+	CheckEvent EVENT_BEAT_TPP_KAY
 	ret z
 	ld a, $1
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
