@@ -154,7 +154,10 @@ BeatTPPRocketA:
 	ld a, HS_TPP_ROCKETA
 	ld [wMissableObjectIndex], a
 	predef HideObject
-	ResetEvent EVENT_BEAT_DREAM_KRIS
+	ld a, HS_TPP_KAY
+	ld [wMissableObjectIndex], a
+	predef ShowObject
+	ResetEvent EVENT_BEAT_TPP_KAY
 	call UpdateSprites
 	ld c, 30
 	call DelayFrames

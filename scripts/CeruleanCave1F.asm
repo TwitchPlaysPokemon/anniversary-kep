@@ -15,9 +15,9 @@ CeruleanCave1F_ScriptPointers:
 CeruleanCave1F_TrainerHeaders:
 	def_trainers
 KAYTrainerHeader:
-	trainer EVENT_BEAT_TPP_KAY, 0, KAYIntroText, KAYOutroText, KAYIntroText	
+	trainer EVENT_BEAT_TPP_KAY, 0, KAYIntroText, KAYOutroText, KAYIntroText
 	db -1 ; end
-	
+
 CeruleanCave1F_TextPointers:
 	dw PickUpItemText
 	dw PickUpItemText
@@ -42,10 +42,7 @@ BeatTPPKAY:
 	ld a, HS_TPP_KAY
 	ld [wMissableObjectIndex], a
 	predef HideObject
-	ld a, HS_TPP_BBBBBa
-	ld [wMissableObjectIndex], a
-	predef ShowObject
-	ResetEvent EVENT_BEAT_TPP_BBBBBa
+	ResetEvent EVENT_BEAT_DREAM_KRIS
 	call UpdateSprites
 	ld c, 30
 	call DelayFrames

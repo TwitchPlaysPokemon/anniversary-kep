@@ -6,7 +6,7 @@ MtMoonCrater_Script:
 	call ExecuteCurMapScriptInTable
 	ld [wMtMoonCraterCurScript], a
 	ret
-	
+
 MtMoonCrater_ScriptPointers:
 	dw CheckFightingMapTrainers
 	dw DisplayEnemyTrainerTextAndStartBattle
@@ -26,7 +26,7 @@ MtMoonCrater_TrainerHeaders:
 MtMoonCrater_TrainerHeader:
 	trainer EVENT_BEAT_TPP_CCC, 0, CCCIntroText, CCCOutroText, CCCIntroText
 	db -1 ; end
-	
+
 TPPCCCText:
 	text_asm
 	ld hl, MtMoonCrater_TrainerHeader
@@ -45,10 +45,10 @@ BeatTPPCCC:
 	ld a, HS_TPP_CCC
 	ld [wMissableObjectIndex], a
 	predef HideObject
-	ld a, HS_TPP_KAY
+	ld a, HS_TPP_BBBBBa
 	ld [wMissableObjectIndex], a
 	predef ShowObject
-	ResetEvent EVENT_BEAT_TPP_KAY
+	ResetEvent EVENT_BEAT_TPP_BBBBBa
 	call UpdateSprites
 	ld c, 30
 	call DelayFrames
@@ -56,11 +56,11 @@ BeatTPPCCC:
 	xor a
 	ld [wJoyIgnore], a
 	jp PlayDefaultMusicFadeOutCurrent
-	
+
 CCCIntroText:
     text "A"
     done
-    
+
 CCCOutroText:
     text "…"
     line "…"
