@@ -6,6 +6,15 @@ If playing on an emulator, BGB is strongly recommended for its accuracy and feat
 
 # For all Pokemon info go [here](https://docs.google.com/spreadsheets/d/1cP8tvoj19__bx08hSG7dOtefVcdaNwZXohVu1RKzjPI/edit?usp=sharing)
 
+TPP's New Anniversary Content
+===================
+
+This is a special modified version of Kanto Expansion Pak, made to be played on Twitch Plays Pokemon for the stream's 11th anniversary! New content is in the form of:
+
+- Phancero, ported straight from Burning Red, another anniversary hack.
+- Six new bosses scattered throughout Kanto in the post-game, appearing in sequence after each other. Make sure to keep exploring!
+- A brand new area, in the slumber of a reverie...
+
 New Pokemon
 ====
 The Kanto Expansion Pak's ethos is to add every "Kanto-related" Pokemon to RBY without fundamentally changing the grander metagame. What's defined as "Kanto-related" is a Pokemon that evolves from an existing Kanto Pokemon, made an appearance in a Kanto-based game (LGPE), is a regional variant, or was a Kanto-related Pokemon cut during the development of an official game.
